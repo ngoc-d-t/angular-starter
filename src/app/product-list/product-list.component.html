@@ -1,0 +1,32 @@
+<h2>Products</h2>
+
+<div *ngFor="let product of products">
+  <h3>
+    <a [title]="product.name + ' details'">
+      {{ product.name }}
+    </a>
+  </h3>
+
+  <p *ngIf="product.description">Description: {{ product.description }}</p>
+  <button
+    style="border-radius: 10px; border-color: green"
+    type="button"
+    (click)="share()"
+    (click)="toggleComp.onNotify()"
+  >
+    Share
+  </button>
+
+  <app-product-alerts
+    #toggleComp
+    [product]="product"
+    (notify)="onNotify($event)"
+  >
+  </app-product-alerts>
+
+  <!-- <app-hello-world-ngif
+    [progress]="15"
+    [backgroundColor]="'#9e9e9e'"
+    [progressColor]="'#2e8b57'"
+  ></app-hello-world-ngif> -->
+</div>
