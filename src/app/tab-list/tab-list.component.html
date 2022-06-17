@@ -1,0 +1,22 @@
+<h1>Angular sample project for Angular 100 Days of Code</h1>
+<h2>Day 17: ContentChild & ContentChildren</h2>
+
+<br />
+
+<button class="btn btn-primary" (click)="showTab = !showTab">
+  Toggle tab 4
+</button>
+
+<app-tab-group>
+  <app-tab-panel title="Tab 1"> content tab 1 </app-tab-panel>
+  <app-tab-panel title="Tab 2"> content tab 2 </app-tab-panel>
+  <app-tab-panel title="Tab 3"> content tab 3 </app-tab-panel>
+  <app-tab-panel title="Tab 4" *ngIf="showTab"> content tab 4 </app-tab-panel>
+</app-tab-group>
+
+<app-bs-tab-group>
+  <app-tab-panel title="Tab 1"> content tab 1 </app-tab-panel>
+  <app-tab-panel title="Tab 2"> content tab 2 </app-tab-panel>
+  <app-tab-panel title="Tab 3"> content tab 3 </app-tab-panel>
+  <app-tab-panel title="Tab 4" *ngIf="showTab"> content tab 4 </app-tab-panel>
+</app-bs-tab-group>

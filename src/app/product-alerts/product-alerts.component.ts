@@ -12,8 +12,11 @@ export class ProductAlertsComponent implements OnInit {
   ngOnInit(): void {}
   @Input() product: Product | undefined;
   @Output() notify: EventEmitter<string> = new EventEmitter();
-  @Output() notify2: EventEmitter<string> = new EventEmitter<string>();
+  // @Output() emitEventNotify: EventEmitter<string> = new EventEmitter<string>();
   onNotify() {
     window.alert('hihi');
+  }
+  emitEventNotify(value: string) {
+    this.notify.emit(value);
   }
 }
