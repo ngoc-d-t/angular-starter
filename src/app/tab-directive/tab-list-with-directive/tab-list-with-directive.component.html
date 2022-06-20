@@ -1,0 +1,27 @@
+<button class="btn btn-primary" (click)="showTab = !showTab">
+  Toggle tab 3
+</button>
+
+<app-bs-tab-group-with-directive>
+  <app-tab-panel-with-directive title="Tab 1">
+    <ng-template tabPanelContent>
+      content tab 1
+      <app-counter></app-counter>
+    </ng-template>
+  </app-tab-panel-with-directive>
+
+  <app-tab-panel-with-directive title="Tab 2">
+    <ng-template tabPanelContent>
+      content tab 2
+      <app-counter></app-counter>
+    </ng-template>
+  </app-tab-panel-with-directive>
+  <app-tab-panel-with-directive title="Tab 3" *ngIf="showTab">
+    <ng-template tabPanelContent>
+      content tab 3
+      <app-counter></app-counter>
+    </ng-template>
+  </app-tab-panel-with-directive>
+</app-bs-tab-group-with-directive>
+
+<app-counter></app-counter>
