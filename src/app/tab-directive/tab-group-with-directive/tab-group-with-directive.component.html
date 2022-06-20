@@ -11,7 +11,7 @@
 
 <div class="tab-body">
   <ng-container *ngFor="let tab of tabPanelList; index as idx">
-    <div>
+    <div *ngIf="idx === tabActiveIndex">
       <ng-container *ngTemplateOutlet="tab.panelBody || null"></ng-container>
     </div>
   </ng-container>

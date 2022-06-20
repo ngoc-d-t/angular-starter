@@ -18,6 +18,7 @@ import { TabListWithDirectiveComponent } from './tab-directive/tab-list-with-dir
 import { BsTabGroupWithDirectiveComponent } from './tab-directive/bs-tab-group-with-directive/bs-tab-group-with-directive.component';
 import { TabPanelWithDirectiveComponent } from './tab-directive/tab-panel-with-directive/tab-panel-with-directive.component';
 import { TabGroupWithDirectiveComponent } from './tab-directive/tab-group-with-directive/tab-group-with-directive.component';
+import { LifeCircleHookComponent } from './life-circle-hook/life-circle-hook.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { TabGroupWithDirectiveComponent } from './tab-directive/tab-group-with-d
     BsTabGroupWithDirectiveComponent,
     TabPanelWithDirectiveComponent,
     TabGroupWithDirectiveComponent,
+    LifeCircleHookComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

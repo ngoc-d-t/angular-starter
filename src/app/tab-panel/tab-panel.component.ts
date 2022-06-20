@@ -14,13 +14,10 @@ import { TabGroupComponent } from '../tab-group/tab-group.component';
 })
 export class TabPanelComponent implements OnInit {
   @Input() title: string = '';
-  @ViewChild(TemplateRef, { static: true }) panelBody:
-    | TemplateRef<unknown>
-    | undefined;
+  @ViewChild(TemplateRef, { static: true }) panelBody!: TemplateRef<unknown>;
   constructor(private tabGroup: TabGroupComponent) {}
   ngOnInit() {
     this.tabGroup.addTabPanel(this);
-    console.log('check: ', this.panelBody);
   }
   ngOnDestroy() {
     this.tabGroup.removeTabPanel(this);

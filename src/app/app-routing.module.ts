@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CardComponent } from './card/card.component';
 import { HelloWorldNgifComponent } from './hello-world-ngif/hello-world-ngif.component';
+import { LifeCircleHookComponent } from './life-circle-hook/life-circle-hook.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { TabListWithDirectiveComponent } from './tab-directive/tab-list-with-directive/tab-list-with-directive.component';
 import { TabListComponent } from './tab-list/tab-list.component';
@@ -17,6 +18,7 @@ const routes: Routes = [
   },
   { path: 'tab-group', component: TabListComponent },
   { path: 'tab-group-directive', component: TabListWithDirectiveComponent },
+  { path: 'life-circle-hook', component: LifeCircleHookComponent },
 ];
 
 @NgModule({

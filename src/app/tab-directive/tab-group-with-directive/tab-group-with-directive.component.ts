@@ -9,7 +9,6 @@ import {
   QueryList,
 } from '@angular/core';
 import { TabPanelWithDirectiveComponent } from '../tab-panel-with-directive/tab-panel-with-directive.component';
-import { TabPanelComponent } from '../../tab-panel/tab-panel.component';
 
 @Component({
   selector: 'app-tab-group-with-directive',
@@ -25,11 +24,30 @@ export class TabGroupWithDirectiveComponent
   @ContentChildren(TabPanelWithDirectiveComponent)
   tabPanelList?: QueryList<TabPanelWithDirectiveComponent>;
 
-  constructor() {}
+  constructor() {
+    console.log('constructor list: ', this.tabPanelList);
+  }
 
-  ngOnInit() {}
+  selectItem(idx: number) {
+    this.tabActiveIndex = idx;
+    this.tabActiveChange.emit(idx);
+  }
+
+  ngOnChange() {
+    console.log('ngOnChange running');
+    console.log('list: ', this.tabPanelList);
+  }
+  ngOnInit(): void {
+    console.log('ngOnInit running');
+    console.log('list: ', this.tabPanelList);
+  }
+  ngDoCheck() {
+    console.log('ngDoCheck running');
+    console.log('list: ', this.tabPanelList);
+  }
 
   ngAfterContentInit() {
+    console.log('ngAfterContentInit running');
     console.log('list: ', this.tabPanelList);
     this?.tabPanelList?.changes.subscribe(() => {
       if (
@@ -40,9 +58,20 @@ export class TabGroupWithDirectiveComponent
       }
     });
   }
-
-  selectItem(idx: number) {
-    this.tabActiveIndex = idx;
-    this.tabActiveChange.emit(idx);
+  ngAfterContentChecked() {
+    console.log('ngAfterContentChecked running');
+    console.log('list: ', this.tabPanelList);
+  }
+  ngAfterViewInit() {
+    console.log('ngAfterViewInit running');
+    console.log('list: ', this.tabPanelList);
+  }
+  ngAfterViewChecked() {
+    console.log('ngAfterViewChecked running');
+    console.log('list: ', this.tabPanelList);
+  }
+  ngDestroy() {
+    console.log('ngDestroy running');
+    console.log('list: ', this.tabPanelList);
   }
 }
