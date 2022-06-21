@@ -21,8 +21,8 @@ export class TabPanelWithDirectiveComponent implements OnInit {
   explicitBody!: TemplateRef<unknown>;
 
   get panelBody(): TemplateRef<unknown> {
-    console.log('get panel 1 :', this.explicitBody);
-    console.log('get panel 2 :', this.implicitBody);
+    // console.log('get panel 1 :', this.explicitBody);
+    // console.log('get panel 2 :', this.implicitBody);
     return this.explicitBody || this.implicitBody;
   }
   constructor() {}
