@@ -8,10 +8,11 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { TabListWithDirectiveComponent } from './tab-directive/tab-list-with-directive/tab-list-with-directive.component';
 import { TabListComponent } from './tab-list/tab-list.component';
 import { ToggleComponent } from './toggle/toggle.component';
-import { CardModule } from './lazy-loading/card/card.module';
+// import { CardModule } from './lazy-loading/card/card.module';
 import { CreditCardDemoModule } from './cards/credit-card-demo/credit-card-demo.module';
 import { CounterModule } from './counter/counter.module';
 import { CounterComponent } from './counter/counter.component';
+import { OperatorsModule } from './operators/operators.module';
 const routes: Routes = [
   { path: 'list', component: ProductListComponent },
   { path: 'hello', component: HelloWorldNgifComponent },
@@ -33,10 +34,20 @@ const routes: Routes = [
     path: 'counter',
     component: CounterComponent,
   },
+  {
+    path: 'operators',
+    loadChildren: () =>
+      import('./operators/operators.module').then((m) => m.OperatorsModule),
+  },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [
+    RouterModule.forRoot(routes),
+    CreditCardDemoModule,
+    CounterModule,
+    OperatorsModule,
+  ],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}
