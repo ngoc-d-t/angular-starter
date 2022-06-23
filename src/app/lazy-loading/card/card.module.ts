@@ -1,12 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule, Routes } from '@angular/router';
 import { EagerComponent } from '../eager/eager.component';
-import { LazyModule } from '../lazy/lazy.module';
 import { CardRoutingModule } from './card.routing.module';
+import { CardComponent } from './card.component';
 
 @NgModule({
-  declarations: [],
+  declarations: [CardComponent, EagerComponent],
   imports: [CommonModule, CardRoutingModule],
 })
 export class CardModule {}

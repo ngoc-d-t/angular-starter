@@ -1,8 +1,10 @@
 import { Injectable } from '@angular/core';
+import { LifeCircleHookComponent } from './life-circle-hook/life-circle-hook.component';
 
-@Injectable({
-  providedIn: 'root',
-})
+@Injectable()
+// @Injectable({
+//   providedIn: LifeCircleHookComponent,
+// })
 export class DataService {
   constructor() {}
   info1: string[] = ['John Mathew', 'E354', 'jm@abc.net'];

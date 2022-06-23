@@ -19,7 +19,9 @@ import { BsTabGroupWithDirectiveComponent } from './tab-directive/bs-tab-group-w
 import { TabPanelWithDirectiveComponent } from './tab-directive/tab-panel-with-directive/tab-panel-with-directive.component';
 import { TabGroupWithDirectiveComponent } from './tab-directive/tab-group-with-directive/tab-group-with-directive.component';
 import { LifeCircleHookComponent } from './life-circle-hook/life-circle-hook.component';
-import { EagerComponent } from './lazy-loading/eager/eager.component';
+import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
+import { LazyFirstComponent } from './lazy-loading/lazy-first/lazy-first.component';
 
 @NgModule({
   declarations: [
@@ -40,12 +42,14 @@ import { EagerComponent } from './lazy-loading/eager/eager.component';
     TabPanelWithDirectiveComponent,
     TabGroupWithDirectiveComponent,
     LifeCircleHookComponent,
-    EagerComponent,
-    // CreditCardComponent,
-    // CreditCardMaskPipe,
-    // CreditCardDemoComponent,
+    LazyFirstComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    StoreModule.forRoot({}, {}),
+    EffectsModule.forRoot([]),
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

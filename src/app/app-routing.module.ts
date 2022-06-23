@@ -8,11 +8,9 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { TabListWithDirectiveComponent } from './tab-directive/tab-list-with-directive/tab-list-with-directive.component';
 import { TabListComponent } from './tab-list/tab-list.component';
 import { ToggleComponent } from './toggle/toggle.component';
-import { CardComponent as LazyCard } from './lazy-loading/card/card.component';
 import { CardModule } from './lazy-loading/card/card.module';
 import { LazyModule } from './lazy-loading/lazy/lazy.module';
 import { CreditCardDemoModule } from './cards/credit-card-demo/credit-card-demo.module';
-import { EagerComponent } from './lazy-loading/eager/eager.component';
 const routes: Routes = [
   { path: 'list', component: ProductListComponent },
   { path: 'hello', component: HelloWorldNgifComponent },
@@ -25,12 +23,10 @@ const routes: Routes = [
   { path: 'tab-group-directive', component: TabListWithDirectiveComponent },
   { path: 'life-circle-hook', component: LifeCircleHookComponent },
   { path: 'credit-card', component: CreditCardDemoComponent },
-  { path: 'lazy-loading', component: LazyCard },
-  { path: '', redirectTo: 'eager', pathMatch: 'full' },
-  { path: 'eager', component: EagerComponent },
   {
-    path: 'lazy',
-    loadChildren: () => import('./lazy-loading/lazy/lazy.module').then((m) => m.LazyModule),
+    path: 'lazy-loading',
+    loadChildren: () =>
+      import('./lazy-loading/card/card.module').then((m) => m.CardModule),
   },
 ];
 
