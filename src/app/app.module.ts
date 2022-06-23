@@ -21,7 +21,6 @@ import { TabGroupWithDirectiveComponent } from './tab-directive/tab-group-with-d
 import { LifeCircleHookComponent } from './life-circle-hook/life-circle-hook.component';
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
-import { LazyFirstComponent } from './lazy-loading/lazy-first/lazy-first.component';
 import { counterReducer } from './stores/counter/counter.reducer';
 
 @NgModule({
@@ -43,7 +42,6 @@ import { counterReducer } from './stores/counter/counter.reducer';
     TabPanelWithDirectiveComponent,
     TabGroupWithDirectiveComponent,
     LifeCircleHookComponent,
-    LazyFirstComponent,
   ],
   imports: [
     BrowserModule,
