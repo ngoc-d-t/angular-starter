@@ -1,7 +1,7 @@
 import { Directive } from '@angular/core';
 
 @Directive({
-  selector: 'ng-template[tabPanelContent]'
+  selector: '[tabPanelContent]'
 })
 export class TabPanelContentDirective {
 

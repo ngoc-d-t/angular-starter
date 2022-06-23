@@ -1,15 +1,5 @@
 import { createAction, props } from '@ngrx/store';
 
-export const nCounters = createAction(
-  '[Counter] N Counters'
-);
-
-export const nCountersSuccess = createAction(
-  '[Counter] N Counters Success',
-  props<{ data: any }>()
-);
-
-export const nCountersFailure = createAction(
-  '[Counter] N Counters Failure',
-  props<{ error: any }>()
-);
+export const increment = createAction('[Counter Component] Increment');
+export const decrement = createAction('[Counter Component] Decrement');
+export const reset = createAction('[Counter Component] Reset');

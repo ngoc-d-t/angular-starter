@@ -9,8 +9,9 @@ import { TabListWithDirectiveComponent } from './tab-directive/tab-list-with-dir
 import { TabListComponent } from './tab-list/tab-list.component';
 import { ToggleComponent } from './toggle/toggle.component';
 import { CardModule } from './lazy-loading/card/card.module';
-import { LazyModule } from './lazy-loading/lazy/lazy.module';
 import { CreditCardDemoModule } from './cards/credit-card-demo/credit-card-demo.module';
+import { CounterModule } from './counter/counter.module';
+import { CounterComponent } from './counter/counter.component';
 const routes: Routes = [
   { path: 'list', component: ProductListComponent },
   { path: 'hello', component: HelloWorldNgifComponent },
@@ -28,6 +29,10 @@ const routes: Routes = [
     loadChildren: () =>
       import('./lazy-loading/card/card.module').then((m) => m.CardModule),
   },
+  {
+    path: 'counter',
+    component: CounterComponent,
+  },
 ];
 
 @NgModule({
@@ -35,7 +40,7 @@ const routes: Routes = [
     RouterModule.forRoot(routes),
     CreditCardDemoModule,
     CardModule,
-    LazyModule,
+    CounterModule,
   ],
   exports: [RouterModule],
 })

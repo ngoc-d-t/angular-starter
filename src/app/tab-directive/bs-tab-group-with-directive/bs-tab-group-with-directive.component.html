@@ -1,4 +1,5 @@
 <ul class="nav nav-tabs" role="tablist">
+  <h1>Tab Header</h1>
   <li
     class="nav-item"
     role="presentation"
@@ -16,6 +17,7 @@
 </ul>
 
 <div class="tab-content">
+  <h1>Tab Body</h1>
   <ng-container *ngFor="let tab of tabPanelList; index as idx">
     <div class="tab-pane active" role="tabpanel" *ngIf="idx === tabActiveIndex">
       <ng-container *ngTemplateOutlet="tab.panelBody || null"></ng-container>

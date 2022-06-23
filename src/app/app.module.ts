@@ -13,7 +13,7 @@ import { TabPanelComponent } from './tab-panel/tab-panel.component';
 import { TabListComponent } from './tab-list/tab-list.component';
 import { BsTabGroupComponent } from './bs-tab-group/bs-tab-group.component';
 import { CounterComponent } from './tab-directive/counter/counter.component';
-import { TabPanelContentDirective } from './tab-panel-content.directive';
+import { TabPanelContentDirective } from './tab-directive/tab-panel-with-directive/tab-panel-content.directive';
 import { TabListWithDirectiveComponent } from './tab-directive/tab-list-with-directive/tab-list-with-directive.component';
 import { BsTabGroupWithDirectiveComponent } from './tab-directive/bs-tab-group-with-directive/bs-tab-group-with-directive.component';
 import { TabPanelWithDirectiveComponent } from './tab-directive/tab-panel-with-directive/tab-panel-with-directive.component';
@@ -22,6 +22,7 @@ import { LifeCircleHookComponent } from './life-circle-hook/life-circle-hook.com
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { LazyFirstComponent } from './lazy-loading/lazy-first/lazy-first.component';
+import { counterReducer } from './stores/counter/counter.reducer';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,7 @@ import { LazyFirstComponent } from './lazy-loading/lazy-first/lazy-first.compone
   imports: [
     BrowserModule,
     AppRoutingModule,
-    StoreModule.forRoot({}, {}),
+    StoreModule.forRoot({ count: counterReducer }),
     EffectsModule.forRoot([]),
   ],
   providers: [],

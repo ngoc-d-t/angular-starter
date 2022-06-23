@@ -6,7 +6,7 @@ import {
   TemplateRef,
   ViewChild,
 } from '@angular/core';
-import { TabPanelContentDirective } from '../../tab-panel-content.directive';
+import { TabPanelContentDirective } from './tab-panel-content.directive';
 
 @Component({
   selector: 'app-tab-panel-with-directive',
@@ -23,7 +23,7 @@ export class TabPanelWithDirectiveComponent implements OnInit {
   get panelBody(): TemplateRef<unknown> {
     // console.log('get panel 1 :', this.explicitBody);
     // console.log('get panel 2 :', this.implicitBody);
-    return this.explicitBody || this.implicitBody;
+    return this.explicitBody;
   }
   constructor() {}
 
