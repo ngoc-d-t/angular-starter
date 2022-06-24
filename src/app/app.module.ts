@@ -22,6 +22,8 @@ import { LifeCircleHookComponent } from './life-circle-hook/life-circle-hook.com
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { counterReducer } from './stores/counter/counter.reducer';
+import { FormsModule } from '@angular/forms';
+import { HeroComponent } from './heroes/hero/hero.component';
 
 @NgModule({
   declarations: [
@@ -42,12 +44,14 @@ import { counterReducer } from './stores/counter/counter.reducer';
     TabPanelWithDirectiveComponent,
     TabGroupWithDirectiveComponent,
     LifeCircleHookComponent,
+    HeroComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     StoreModule.forRoot({ count: counterReducer }),
     EffectsModule.forRoot([]),
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

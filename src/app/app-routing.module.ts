@@ -8,11 +8,12 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { TabListWithDirectiveComponent } from './tab-directive/tab-list-with-directive/tab-list-with-directive.component';
 import { TabListComponent } from './tab-list/tab-list.component';
 import { ToggleComponent } from './toggle/toggle.component';
-// import { CardModule } from './lazy-loading/card/card.module';
 import { CreditCardDemoModule } from './cards/credit-card-demo/credit-card-demo.module';
 import { CounterModule } from './counter/counter.module';
 import { CounterComponent } from './counter/counter.component';
 import { OperatorsModule } from './operators/operators.module';
+import { HeroPageModule } from './heroes/hero-page/hero-page.module';
+import { HeroPageComponent } from './heroes/hero-page/hero-page.component';
 const routes: Routes = [
   { path: 'list', component: ProductListComponent },
   { path: 'hello', component: HelloWorldNgifComponent },
@@ -39,6 +40,10 @@ const routes: Routes = [
     loadChildren: () =>
       import('./operators/operators.module').then((m) => m.OperatorsModule),
   },
+  {
+    path: 'heroes',
+    component: HeroPageComponent,
+  },
 ];
 
 @NgModule({
@@ -47,6 +52,7 @@ const routes: Routes = [
     CreditCardDemoModule,
     CounterModule,
     OperatorsModule,
+    HeroPageModule,
   ],
   exports: [RouterModule],
 })
