@@ -14,6 +14,8 @@ import { CounterComponent } from './counter/counter.component';
 import { OperatorsModule } from './operators/operators.module';
 import { HeroPageModule } from './heroes/hero-page/hero-page.module';
 import { HeroPageComponent } from './heroes/hero-page/hero-page.component';
+import { HeroFormComponent } from './form/hero-form/hero-form.component';
+import { HeroFormModule } from './form/hero-form/hero-form.module';
 const routes: Routes = [
   { path: 'list', component: ProductListComponent },
   { path: 'hello', component: HelloWorldNgifComponent },
@@ -44,6 +46,7 @@ const routes: Routes = [
     path: 'heroes',
     component: HeroPageComponent,
   },
+  { path: 'form', component: HeroFormComponent },
 ];
 
 @NgModule({
@@ -53,6 +56,7 @@ const routes: Routes = [
     CounterModule,
     OperatorsModule,
     HeroPageModule,
+    HeroFormModule,
   ],
   exports: [RouterModule],
 })
