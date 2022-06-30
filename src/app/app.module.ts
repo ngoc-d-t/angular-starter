@@ -24,6 +24,8 @@ import { EffectsModule } from '@ngrx/effects';
 import { counterReducer } from './stores/counter/counter.reducer';
 import { FormsModule } from '@angular/forms';
 import { HeroComponent } from './heroes/hero/hero.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DialogModule } from './dialog/dialog.module';
 
 @NgModule({
   declarations: [
@@ -52,6 +54,8 @@ import { HeroComponent } from './heroes/hero/hero.component';
     StoreModule.forRoot({ count: counterReducer }),
     EffectsModule.forRoot([]),
     FormsModule,
+    BrowserAnimationsModule,
+    DialogModule
   ],
   providers: [],
   bootstrap: [AppComponent],

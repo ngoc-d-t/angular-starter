@@ -16,6 +16,7 @@ import { HeroPageModule } from './heroes/hero-page/hero-page.module';
 import { HeroPageComponent } from './heroes/hero-page/hero-page.component';
 import { HeroFormComponent } from './form/hero-form/hero-form.component';
 import { HeroFormModule } from './form/hero-form/hero-form.module';
+import { DialogOverviewExampleComponent } from './dialog/dialog-overview-example/dialog-overview-example.component';
 const routes: Routes = [
   { path: 'list', component: ProductListComponent },
   { path: 'hello', component: HelloWorldNgifComponent },
@@ -47,6 +48,7 @@ const routes: Routes = [
     component: HeroPageComponent,
   },
   { path: 'form', component: HeroFormComponent },
+  { path: 'dialog', component: DialogOverviewExampleComponent },
 ];
 
 @NgModule({
