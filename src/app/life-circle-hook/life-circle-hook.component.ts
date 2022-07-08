@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
 
 @Component({
@@ -8,7 +8,7 @@ import { DataService } from '../data.service';
   providers: [DataService],
 })
 export class LifeCircleHookComponent implements OnInit {
-  constructor(private dservice: DataService) {}
+  constructor(private dservice: DataService, cd: ChangeDetectorRef) {}
 
   ngOnChange() {
     console.log('ngOnChange running');

@@ -1,0 +1,14 @@
+<h1>Author: DaiDH</h1>
+
+<h4>DetectChanges</h4>
+<button (click)="detach()">Detach</button> |
+<button (click)="detectChanges()">DetectChanges</button> |
+<button (click)="reattach()">ReAttach</button> |
+<button (click)="checkNoChanges()">CheckNoChanges</button>
+
+<h4>Increment</h4>
+<button (click)="add()">Add ++</button> => {{ data.index }}
+
+<h4>MarkForCheck</h4>
+
+<app-counter [data]="data"></app-counter>

@@ -26,6 +26,7 @@ import { FormsModule } from '@angular/forms';
 import { HeroComponent } from './heroes/hero/hero.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DialogModule } from './dialog/dialog.module';
+import { DetectChangeModule } from './detect-change/detect-change.module';
 
 @NgModule({
   declarations: [
@@ -55,7 +56,8 @@ import { DialogModule } from './dialog/dialog.module';
     EffectsModule.forRoot([]),
     FormsModule,
     BrowserAnimationsModule,
-    DialogModule
+    DialogModule,
+    DetectChangeModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
